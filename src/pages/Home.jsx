@@ -12,20 +12,18 @@ function Home() {
 
   return (
     <>
-      <div className="container">
-        <Button onClick={() => setIsAddNewProductModalOpen(true)}>
-          Add Product
-        </Button>
+      <Button onClick={() => setIsAddNewProductModalOpen(true)}>
+        Add Product
+      </Button>
 
-        <SortSelector value={sortBy} setValue={setSortBy} />
+      <SortSelector value={sortBy} setValue={setSortBy} />
 
-        <ProductList sortBy={sortBy} />
+      <ProductList sortBy={sortBy} />
 
-        <AddNewProduct
-          isOpen={isAddNewProductModalOpen}
-          setIsOpen={setIsAddNewProductModalOpen}
-        />
-      </div>
+      <AddNewProduct
+        isOpen={isAddNewProductModalOpen}
+        setIsOpen={setIsAddNewProductModalOpen}
+      />
     </>
   );
 }
